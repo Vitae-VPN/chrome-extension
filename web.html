@@ -2,20 +2,38 @@
 <head>
     <link rel="stylesheet" href="stylesheet.css">
     <script src="main_popup.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-    <h2><img src="icons/16.png" alt="Vitae Proxy Logo"> Welcome to Vitae Proxy.</h2>
+
+    <div class="title">
+
+      <img class="logo" src="icons/192.png" alt="Vitae Proxy Logo">
+      <h1>Vitae Proxy</h1>
+
+    </div>
+
     <h3>created by A&S<h3><br>
+    
     <div class="multi-button">
-        <button id="setup">Start Proxy</button>
-        <button id="end">Terminate</button>
-      </div>
-      <details>
-        <summary>Advanced</summary>
-        <input id="host" value="144.126.217.146"><br>
+      <button id="setup">Start Proxy</button>
+      <button id="end">Terminate</button>
+    </div>
+
+    <details>
+      <summary>Advanced</summary>
+      <div class="inside">
+        <label>
+          Control custom HTTP proxy IP address<br>
+          <input id="host" value="144.126.217.146">
+        </label><br>
+        <div class="code">
+          <u><b>Current configuration</b></u>
           <code id="settings"></code>
-      </details>
+        </div>
+      </div> 
+    </details>
 
 
 </body>

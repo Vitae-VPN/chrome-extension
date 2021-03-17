@@ -33,12 +33,9 @@ function setupProxy(host) {
         scope: 'regular'
     }, function() {});
 
-    chrome.proxy.settings.get(
-        {'incognito': false},
-        function(config) {
-          document.getElementById("settings").innerText = JSON.stringify(config);
-        }
-    );
+    propogateConfigToUI();
+
+    window.open("https://vitae-cdn.netlify.app/extension/connect/");
 
 }
 
@@ -52,10 +49,28 @@ function endProxy() {
         scope: 'regular'
     }, function() {});
 
+    propogateConfigToUI();
+
+}
+
+function propogateConfigToUI() {
+
     chrome.proxy.settings.get(
         {'incognito': false},
         function(config) {
-          document.getElementById("settings").innerText = JSON.stringify(config);
+
+            console.dir(config)
+
+            document.getElementById("settings").innerText = JSON.stringify(config);
+          
+            if (config.value.mode == "fixed_servers") {
+                document.getElementById("setup").innerHTML = "&#10004; Running!";
+                document.getElementById("setup").classList.add("running");
+            } else {
+                document.getElementById("setup").classList.remove("running");
+            }
+
         }
     );
+
 }
