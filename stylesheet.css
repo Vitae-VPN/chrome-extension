@@ -4,13 +4,13 @@
   --duration: 250ms;
   --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
   --button-font: monospace;
-  --font-family: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --color-primary: white;
   --color-secondary: black;
   --color-tertiary: coral;
   --color-indicator-good: lightgreen;
   --shadow: rgba(0, 0, 0, 0.1);
-  --space: 1rem;
+  --space: 0.9rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,6 +30,11 @@ body {
   color: var(--color-secondary);
   padding: 20px;
 
+}
+
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
 }
   
   * {
@@ -131,8 +136,15 @@ h1 {
 
 details {
   width: 100%;
-  margin: 15px;
+  margin: 20px 10px;
   max-width: inherit;
+  display: block;
+}
+
+summary {
+  padding-bottom: 20px;
+  user-select: none;
+  cursor: pointer;
 }
 
 details .inside label {
@@ -141,7 +153,8 @@ details .inside label {
 }
 
 details .inside {
-  margin: 15px 0;
+  margin-bottom: 15px;
+  margin-top: -20px;
 }
 
 details .inside .code {
@@ -149,7 +162,7 @@ details .inside .code {
   display: block;
 }
 
-details input {
+details select, details input {
 
   width: calc(100% - 25px);
   background-color: transparent;
@@ -161,4 +174,14 @@ details input {
 
   font-family: var(--font-family);
 
+  margin: 5px auto;
+
+}
+
+details input option {
+  color: black !important;
+}
+
+details .inside div {
+  margin: 15px 0;
 }

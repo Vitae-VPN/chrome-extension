@@ -1,8 +1,12 @@
 <!doctype html>
 <head>
+
     <link rel="stylesheet" href="stylesheet.css">
     <script src="main_popup.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -14,7 +18,7 @@
 
     </div>
 
-    <h3>created by A&S<h3><br>
+    <h3>created by A&S</h3><br>
     
     <div class="multi-button">
       <button id="setup">Start Proxy</button>
@@ -23,11 +27,33 @@
 
     <details>
       <summary>Advanced</summary>
+
       <div class="inside">
-        <label>
-          Control custom HTTP proxy IP address<br>
-          <input id="host" value="144.126.217.146">
-        </label><br>
+
+        <div class="holder">
+          <i>Please note: these options are calibrated for the default proxy server. If they are changed, connection will most likely fail.</i>
+        </div>
+
+        <div class="holder">
+          <label>
+            Control custom HTTP proxy IP address<br>
+            <input id="host" value="144.126.217.146">
+          </label>
+        </div>
+
+        <div class="holder">
+          <label>
+            Proxy type - <i>option in development</i><br>
+            <select id="type">
+
+              <option value="http">default http/s proxy</option>
+              <option value="socks">SOCKS4</option>
+              <option value="socks">SOCKS5</option>
+
+            </select><br>
+          </label>
+        </div>
+
         <div class="code">
           <u><b>Current configuration</b></u>
           <code id="settings"></code>
