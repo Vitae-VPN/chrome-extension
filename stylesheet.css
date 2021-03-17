@@ -1,6 +1,10 @@
+details {
+  width: 357.27px;
+}
 body {
     font-family: "SF Pro", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 :root {
     --border-size: 0.125rem;
     --duration: 250ms;
