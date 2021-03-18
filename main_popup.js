@@ -19,11 +19,13 @@ function setupProxy(host) {
                     rules: {
                         proxyForHttp: {
                             scheme: "http",
-                            host: host
+                            host: host,
+                            port: 443
                         },
                         proxyForHttps: {
                             scheme: "http",
-                            host: host
+                            host: host,
+                            port: 443
                         },
                         bypassList: []
                     }
