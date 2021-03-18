@@ -79,6 +79,7 @@ function propogateConfigToUI() {
 
             } else {
                 document.getElementById("setup").classList.remove("running");
+                document.getElementById("setup").innerHTML = "start proxy";
                 chrome.browserAction.setBadgeText({text: "OFF"});
                 chrome.browserAction.setBadgeBackgroundColor({color: "#FF4A1C"});
             }
