@@ -2,6 +2,7 @@
 window.onload = function () {
     document.getElementById("setup").onclick = () => {setupProxy(document.getElementById('host').value);}
     document.getElementById("end").onclick = endProxy;
+    document.getElementById("help").onclick = () => {window.open("https://vitae-cdn.netlify.app/docs/extension")}
 
     propogateConfigToUI();
 }
